@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_wtf import FlaskForm
 from wtforms import Form, StringField, EmailField, PasswordField, SubmitField
@@ -14,7 +15,7 @@ db = SQLAlchemy(app=to_do_list)  # Creating database object by passing in the ob
 
 login_manager = LoginManager()  # Instance of class login manager.
 login_manager.init_app(to_do_list)  # Configuration of application with Login Manager
-to_do_list.secret_key = "aiuwg4f87g43$#^%FGdg^@#ytu7e4^e"
+to_do_list.secret_key = os.environ.get('TODOLIST_KEY')
 
 
 # User loader callback
@@ -45,7 +46,7 @@ all_tasks = db.session.query(Tasks).all()
 print(all_tasks)
 user_data = User.query.all()
 # Flask Form code
-csrf_token = "293rhoadsjslvr"  # Creating csrf token to access forms as we switch templates
+csrf_token = os.environ.get("CSRF_TOKEN")  # Creating csrf token to access forms as we switch templates
 to_do_list.config['SECRET_KEY'] = csrf_token  # Configuring application with csrf key and so to Flask Form
 
 
