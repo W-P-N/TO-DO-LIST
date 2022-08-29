@@ -1,0 +1,13 @@
+{% include "header.html" %}
+<div class="col-lg-6 title-div">
+      <h1 class="welcome"><strong>Green Tea</strong><br>To-Do List</h1>
+    {% if not user_logged_in %}
+      <a href="{{ url_for('login') }}"><button type="button" class="btn btn-primary btn-lg ind-button">Login</button></a>
+      <a href="{{ url_for('signup') }}"><button type="button" class="btn btn-primary btn-lg ind-button">Signup</button></a>
+    {% else %}
+    <a href="{{ url_for('main_application') }}"><button type="button" class="btn btn-primary btn-lg ind-button">Go To Your TO-DO LIST</button></a>
+    {% endif %}
+    </div>
+    <div class="col-lg-6 title-image-div">
+      <img class="title-image" src="static/images/to-do-list.png" height="250" width="250" alt="To-Do">
+    </div>

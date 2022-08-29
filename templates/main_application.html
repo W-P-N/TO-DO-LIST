@@ -1,0 +1,35 @@
+{% block content %}
+{% include "header.html" %}
+<div class="container-app">
+      <h1 style="color:#347571">TO-DO LIST</h1>
+      <div class="row">
+        <div class="col task-heading">
+          <h4><strong>TASK</strong></h4>
+        </div>
+        <div class="col task-heading">
+          <h4><strong>REMOVE</strong></h4>
+        </div>
+      </div>
+    {% for task in tasks_list %}
+    {% if task.user_id == id%}
+      <div class="row tasks">
+        <div class="col">
+            <h5>{{ task.task }}</h5>
+        </div>
+        <div class="col">
+            <a href="{{ url_for('delete_task', id=task.id) }}"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+      </div><br>
+    {% endif %}
+    {% endfor %}
+      <div class="add-task-div">
+          <form method="post">
+              {{ form.csrf_token }}
+              <strong>{{ form.task.label }}</strong> <br>{{ form.task(class="data-box-main") }}<br><br>
+              <span class="spn-button-tsk">
+                {{ form.add_task(class="btn btn-primary btn-lg sub-btn") }}
+              </span>
+          </form>
+      </div>
+</div>
+{% endblock %}

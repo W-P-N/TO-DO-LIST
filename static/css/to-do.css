@@ -1,0 +1,131 @@
+/*Header CSS*/
+.nav-item {
+  padding: 0 5%;
+}
+
+.nav-link {
+  color: #347571;
+}
+
+.navbar {
+  padding: 3% 10%;
+  display: flex;
+}
+.navbar-nav {
+  margin-right: 20%;
+}
+
+.navbar-brand {
+  color: #347571;
+  font-size: 2rem;
+  font-family:'Lora', serif;
+}
+
+body {
+  background-color: #ecf8e5
+}
+/*Index CSS*/
+.welcome {
+  font-size: 5.3rem;
+  color: #347571;
+  font-family: "Ubuntu";
+  text-align: left;
+  padding-bottom: 22%;
+}
+.title-div {
+  padding: 7% 3% 2% 15%;
+  position:absolute;
+}
+.check-list-img {
+  height: 100%;
+  width: 100%;
+}
+.btn-primary {
+  background-color: #5ec57e;
+}
+.title-image-div {
+  padding-left: 15%;
+  padding-top: 7rem;
+  transform: rotate(25deg);
+  float: right;
+}
+.ind-button {
+  margin: 5% 3% 5% 0;
+  width: 40%;
+  padding: 1% 0;
+}
+.btn:hover {
+  color: #5ec57e;
+  background-color: #347571;
+}
+/* Login css */
+.login {
+  margin:auto;
+}
+.login-title {
+  padding: 4% 10% 93px 10%;
+  margin: auto;
+  text-align: center;
+  font-size: 60px;
+  color: #347571;
+}
+.data-box {
+  width: 100%;
+  margin: auto;
+}
+.input-details {
+    padding: 0 5% 93px 7%;
+    font-size: 28px;
+    color: #5ec57e;
+}
+.sub-btn {
+  font-size: 20px;
+  border: 0;
+  padding: 10px 15%;
+}
+.spn-button {
+  text-align: center;
+  padding: 0 30%;
+  margin: auto;
+}
+/* to-do-list-app */
+.container-app {
+  padding: 1% 24% 2% 24%;
+}
+.row {
+  padding: 6% 0 5% 0;
+}
+.spn-button-tsk {
+  text-align: center;
+  margin: auto;
+}
+.add-task-div {
+  font-size: 28px;
+  color: #5ec57e;
+}
+.data-box-main {
+  width: 60%;
+}
+.message {
+  color: red;
+  text-align: center;
+  padding: 1%;
+}
+.task-heading {
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+  color: #0f3f13;
+}
+.tasks {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+.col {
+  padding: 0;
+}
+.check-box {
+  height: 30px;
+  width: 30px;
+}

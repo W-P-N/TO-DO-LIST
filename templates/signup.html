@@ -1,0 +1,19 @@
+{% block content %}
+{% include "header.html" %}
+<div class="container login">
+      <h1 class="login-title">WELCOME</h1>
+        <form method="POST">
+            {{ form.csrf_token }}
+            <div class="container input-details">
+                <div class="input-details">
+                    <b>{{ form.name.label }}</b><br>{{ form.name(class="data-box") }}<br><br>
+                    <b>{{ form.email.label }}</b><br>{{ form.email(class="data-box") }}<br><br>
+                    <b>{{ form.password.label }}</b><br>{{ form.password(class="data-box") }}<br>
+                </div>
+                <span class="spn-button">
+                  {{ form.signup_button(class="btn btn-primary btn-lg sub-btn") }}
+                </span>
+            </div>
+        </form>
+</div>
+{% endblock %}
