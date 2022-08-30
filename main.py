@@ -20,7 +20,7 @@ login_manager.init_app(to_do_list)  # Configuring application with Login Manager
 to_do_list.secret_key = os.environ.get('TODOLIST_KEY')  # Creating a secret key to protect sessions
 csrf_token = os.environ.get("CSRF_TOKEN")  # Creating csrf token to access forms as we switch templates
 
-# db = SQLAlchemy(app=to_do_list)  # Creating database object and configuring it with application
+db = SQLAlchemy(app=to_do_list)  # Creating database object and configuring it with application
 
 
 # User loader callback
