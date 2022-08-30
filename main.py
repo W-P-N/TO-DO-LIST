@@ -11,7 +11,8 @@ to_do_list = Flask(__name__)  # Creating a Flask application
 
 login_manager = LoginManager()  # Creating instance of login manager to add authentication functionality.
 
-to_do_list.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///to_do.db")  # Configuring application with sqlalchemy.
+to_do_list.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///to_do.db")  # Configuring
+# application with sqlalchemy.
 login_manager.init_app(to_do_list)  # Configuring application with Login Manager
 
 # CONSTANTS:
@@ -51,7 +52,7 @@ class Tasks(db.Model):
     # the task.
 
 
-db.create_all()  # Creates tables and databases.... Commented out because database is already created.
+# db.create_all()  # Creates tables and databases.... Commented out because database is already created.
 
 users_list = User.query.all()  # Getting the list of all users in the database.
 
