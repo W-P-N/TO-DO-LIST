@@ -14,6 +14,7 @@ login_manager = LoginManager()  # Creating instance of login manager to add auth
 
 to_do_list.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///to_do.db")  # Configuring
 # application with sqlalchemy.
+to_do_list.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Set track modifications in database to false.
 login_manager.init_app(to_do_list)  # Configuring application with Login Manager
 
 # CONSTANTS:
