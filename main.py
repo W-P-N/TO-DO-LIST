@@ -55,7 +55,7 @@ class Tasks(db.Model):
     # the task.
 
 
-db.create_all()  # Creates tables and databases.... Commented out because database is already created.
+# db.create_all()  # Creates tables and databases.... Commented out because database is already created.
 
 users_list = User.query.all()  # Getting the list of all users in the database.
 
