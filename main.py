@@ -7,7 +7,6 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug import security as s
 from flask_login import LoginManager, login_required, login_user, UserMixin, current_user, logout_user
 
-
 to_do_list = Flask(__name__)  # Creating a Flask application
 
 login_manager = LoginManager()  # Creating instance of login manager to add authentication functionality.
@@ -107,7 +106,7 @@ def get_tasks():
     all_tasks = db.session.query(Tasks).all()  # Getting the list of all tasks in the database.
     return all_tasks
 
-print(get_tasks())
+
 # Routes:
 @to_do_list.route("/")  # Home Route.
 def home():
