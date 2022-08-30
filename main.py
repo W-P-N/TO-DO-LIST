@@ -192,4 +192,4 @@ def logout():
 
 
 if __name__ == "__main__":  # If name of the running script is __main__, then the application will run.
-    to_do_list.run(debug=True)
+    to_do_list.run()
