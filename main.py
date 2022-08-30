@@ -107,7 +107,7 @@ def get_tasks():
     all_tasks = db.session.query(Tasks).all()  # Getting the list of all tasks in the database.
     return all_tasks
 
-
+print(get_tasks())
 # Routes:
 @to_do_list.route("/")  # Home Route.
 def home():
@@ -176,7 +176,7 @@ def main_application():
     # this command will be executed.
 
 
-@to_do_list.route("/del/<int:id>")  # Delete task Route.
+@to_do_list.route("/del/<int:tsk_id>")  # Delete task Route.
 @login_required  # This decorator checks if the user is logged in to delete task.
 def delete_task(tsk_id):  # Passing in the task id that is to be deleted.
     del_task = Tasks.query.get(tsk_id)  # Getting the task from database using task id.
@@ -193,4 +193,4 @@ def logout():
 
 
 if __name__ == "__main__":  # If name of the running script is __main__, then the application will run.
-    to_do_list.run()
+    to_do_list.run(debug=True)
