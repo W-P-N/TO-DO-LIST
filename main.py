@@ -17,8 +17,8 @@ to_do_list.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "s
 login_manager.init_app(to_do_list)  # Configuring application with Login Manager
 
 # CONSTANTS:
-to_do_list.secret_key = "sdfiuvbe598"  # Creating a secret key to protect sessions
-csrf_token = "adsiifb455df$^"  # Creating csrf token to access forms as we switch templates
+to_do_list.secret_key = os.environ.get("TODOLIST_KEY")  # Creating a secret key to protect sessions
+csrf_token = os.environ.get("CSRF_TOKEN")  # Creating csrf token to access forms as we switch templates
 
 db = SQLAlchemy(app=to_do_list)  # Creating database object and configuring it with application
 
