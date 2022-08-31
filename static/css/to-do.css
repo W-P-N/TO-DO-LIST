@@ -36,18 +36,27 @@ body {
   padding: 7% 3% 2% 15%;
   position:absolute;
 }
-.check-list-img {
-  height: 100%;
-  width: 100%;
-}
 .btn-primary {
   background-color: #5ec57e;
 }
 .title-image-div {
-  padding-left: 15%;
-  padding-top: 7rem;
+  padding-left: 10%;
+  padding-top: 11rem;
   transform: rotate(25deg);
   float: right;
+}
+@media (max-width:768px) {
+  .title-div {
+    position: static;
+    text-align: center;
+  }
+  .welcome {
+    padding-top: 10%;
+    text-align: center;
+  }
+  .title-image {
+    display: none;
+  }
 }
 .ind-button {
   margin: 5% 3% 5% 0;
