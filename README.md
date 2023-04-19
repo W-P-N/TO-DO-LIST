@@ -1,8 +1,7 @@
 
 # To Do List Web Application
 
-This project is a source code for the following application hosted on Heroku:
- (https://gt-todolist.herokuapp.com/)
+This project is a source code for the To Do List web application.
 
 
 ## Features
